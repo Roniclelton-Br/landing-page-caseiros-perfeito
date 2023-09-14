@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./img/delicioso-pedaco-de-bolo-no-prato.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.degrade {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)) ;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
+header {
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+header img{
+    max-width: 60px;
+    margin-left: 20px;
+}
+header nav {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav i {
+    font-size: 20px;
+    color: #e73d90;
+}
+header nav a,
+header nav a i{
+    transition: 0.5s all ease-in-out;
+}
+header nav a:hover,
+header nav a i:hover{
+    transform: scale(1.1);
+    color: #ffffcf;
+}
+main {
+    max-width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main div {
+    margin: 20px;
+}
+main div img {
+    max-width: 100%;
+    height: auto;
+    margin-right: -20px;
+}
+
+main .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main .info h1 {
+    max-width: 400px;
+    font-size: 36px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 2px;
+    color: #e73d90;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+main .info h1::first-letter {
+    font-size: 50px;
+}
+main .info h3 {
+    font-family: 'Pacifico', cursive;
+    margin-top: -10px;
+    color: #ffffcf;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+main .info p {
+    max-width: 400px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+}
+main .info p::first-letter {
+    font-size: 25px;
+}
+main .info .btn-cardapio {
+    background-color: #e73d90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+main .info .btn-cardapio:hover {
+    transform: scale(1.1);
+    background-color: #ffffcf;
+    color: #e73d90;
+}
+footer {
+    width: 80%;
+    padding: 20px;
+}
+footer address{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+    color: #fff;
+}
+footer address div a{
+   margin-right: 10px;
+}
+footer address div i,
+footer address div a{
+    color: #e73d90;
+    transition: 0.5s ease-in-out;
+    
+}
+footer address div a i:hover {
+    color: #ffffcf;
+}
+
+@media screen and (max-width: 900px){
+    main .info h1 {
+        font-size: 30px;
+        line-height: 40px
+    }
+    main .info h1::first-letter {
+        font-size: 40px;
+    }
+    main .info h3 {
+        margin-top: 5px;
+    }
+    main .info p {
+        font-size: 16px;
+    }
+    main .info p::first-letter {
+        font-size: 22px;
+    }
+    main .info .btn-cardapio {
+        font-size: 16px;
+    }
+    main div img {
+        max-width: 120%;
+    }
+}
+@media screen and (max-width: 700px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main div img {
+        display: none;
+    }
+}
+@media screen and (max-width:500px){
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        height: 20vh;
+    }
+    header img {
+        max-width: 100px;
+        margin-left: -5px;
+    }
+    main {
+        height: 70vh;
+    }
+    footer {
+        height: 20vh;
+    }
+    footer address {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: -70px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 400px){
+    main .info h1,
+    main .info p{
+        max-width: 300px;
+    }
+    main .info h1 {
+        margin-top: -50px;
+        font-size: 25px;
+    }
+    main .info h1::first-letter {
+        font-size: 30px;
+    }
+    main .info h3 {
+        margin-top: -5px;
+        font-size: 18px;
+    }
+    main .info p {
+        margin-top: 20px;
+    }
+    main .info .btn-cardapio {
+        font-size: 14px;
+    }
+}
